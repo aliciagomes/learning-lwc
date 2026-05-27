@@ -7,6 +7,12 @@
                 <identifier>c_parentComponent</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>parentComponent1</componentName>
+                <identifier>c_parentComponent1</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>region1</name>
         <type>Region</type>
     </flexiPageRegions>
