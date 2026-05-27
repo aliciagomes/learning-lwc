@@ -1,10 +1,12 @@
 import { LightningElement } from 'lwc';
 
 export default class ParentComponent2 extends LightningElement {
-    name='';
+    firstname='';
+    lastname='';
 
     handleEvent(event)
     {
-        this.name=event.detail;
+        this.firstname=event.detail.FirstName;
+        this.lastname=event.detail.LastName;
     }
 }
