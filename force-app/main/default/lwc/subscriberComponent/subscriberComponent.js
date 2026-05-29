@@ -3,7 +3,8 @@ import { LightningElement, wire } from 'lwc';
 import ComrevoChannel from '@salesforce/messageChannel/ComrevoChannel__c';
 
 export default class SubscriberComponent extends LightningElement {
-    name='';
+  firstName='';
+    lastName='';
     subscription=null;
     @wire (MessageContext) messageContext;
 
@@ -24,7 +25,8 @@ export default class SubscriberComponent extends LightningElement {
             this.subscription=subscribe(this.messageContext, ComrevoChannel, 
                 (parameter)=>
                 {
-                    this.name=parameter.name;
+                    this.firstName=parameter.firstname;
+                    this.lastName=parameter.lastname;
                 }
                 );
         }

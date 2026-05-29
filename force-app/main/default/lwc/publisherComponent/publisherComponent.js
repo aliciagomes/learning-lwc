@@ -3,19 +3,25 @@ import { LightningElement, wire } from 'lwc';
 import ComrevoChannel from '@salesforce/messageChannel/ComrevoChannel__c';// necessário quando há esse tipo comunicação
 
 export default class PublisherComponent extends LightningElement {
-    name='';
+ firstName='';
+    lastName='';
     @wire (MessageContext) messageContext;
     
-    handleChange(event)
+    handleChangeFirstName(event)
     {
-        this.name=event.target.value;
+        this.firstName=event.target.value;
+    }
+
+    handleChangeLastName(event)
+    {
+        this.lastName=event.target.value;
     }
 
     handleClick(event)
     {
         //code to pass message to subscribers
-        let payload={name:this.name};
-        publish(this.messageContext, ComrevoChannel, payload);//passando os dados para o outro componente
+        let payload={firstname:this.firstName, lastname:this.lastName};
+        publish(this.messageContext, ComrevoChannel, payload);
     }
 }
 

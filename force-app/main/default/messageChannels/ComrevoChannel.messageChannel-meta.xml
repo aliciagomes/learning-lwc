@@ -6,8 +6,13 @@
     <masterLabel>ComrevoChannel</masterLabel>
 
     <lightningMessageFields>
-        <fieldName>name</fieldName>
-        <description>Name of the Person</description>
+        <fieldName>firstname</fieldName>
+        <description>First Name of the Person</description>
+    </lightningMessageFields>
+
+    <lightningMessageFields>
+        <fieldName>lastname</fieldName>
+        <description>Last Name of the Person</description>
     </lightningMessageFields>
 
 </LightningMessageChannel>
